@@ -1,0 +1,149 @@
+/* ================= Reset ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ================= Body ================= */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #333;
+}
+
+/* ================= Container ================= */
+.container {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    animation: slideFade 0.8s ease forwards;
+}
+
+/* ================= Heading ================= */
+.container h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* ================= Info & Error ================= */
+.info {
+    background-color: #daf5d7;
+    color: #3c763d;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* ================= Input Fields ================= */
+.container input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.container input[type="number"]:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+    outline: none;
+}
+
+/* ================= Buttons ================= */
+.container input[type="submit"],
+.container button {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.container input[type="submit"] {
+    background: #667eea;
+    color: #fff;
+}
+
+.container input[type="submit"]:hover {
+    background: #5a67d8;
+}
+
+.container button {
+    background: #764ba2;
+    color: #fff;
+}
+
+.container button:hover {
+    background: #5f3b99;
+}
+
+/* ================= Resend Button ================= */
+.container button {
+    font-size: 14px;
+}
+
+/* ================= Animations ================= */
+@keyframes slideFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 500px) {
+    .container {
+        padding: 30px 20px;
+    }
+}
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    font-size: 16px;
+    transition: visibility 0s, opacity 0.5s linear;
+    opacity: 0;
+}
+
+#toast.show {
+    visibility: visible;
+    opacity: 1;
+}

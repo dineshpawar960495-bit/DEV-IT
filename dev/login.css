@@ -1,0 +1,152 @@
+/* ================== Reset ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* ================== Body ================== */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  background-size: cover;
+  padding: 20px;
+}
+
+/* ================== Container ================== */
+.container {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ================== Form Box ================== */
+.form-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+  color: #fff;
+  text-align: center;
+}
+
+/* Title */
+.form-box h2 {
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* ================== Form ================== */
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Input Fields */
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* ================== Button ================== */
+.form-group button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-group button:hover {
+  background: #576bd6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ================== Error Alert ================== */
+.alert {
+  background: rgba(255, 50, 50, 0.2);
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 50, 50, 0.5);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #ffbaba;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* ================== Extra Text ================== */
+.text-center {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.text-center a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.text-center a:hover {
+  color: #ffdf5d;
+}
+
+/* ================== Animations ================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 480px) {
+  .form-box {
+    padding: 30px 20px;
+  }
+
+  .form-box h2 {
+    font-size: 22px;
+  }
+
+  .form-group input,
+  .form-group button {
+    font-size: 15px;
+  }
+}
